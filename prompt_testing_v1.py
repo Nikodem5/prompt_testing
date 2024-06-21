@@ -46,7 +46,6 @@ def main(page: ft.Page):
             page.overlay.append(dlg)
             dlg.open = True
             page.update()
-            # print(e)
             return
         print('creating thread')
         thread = client.beta.threads.create()
@@ -57,7 +56,6 @@ def main(page: ft.Page):
         cols.append(col)
 
         page.controls[2].controls.insert(-1, ft.Text(f'{assistant.name} ({assistant.id})', selectable=True))
-        # page.controls[2].controls.append(col)
         with open('assistants.txt', 'a') as f:
             f.write(assistant_id + '\n')
         print('added new assistant and thread')
@@ -114,7 +112,6 @@ def main(page: ft.Page):
             )
             cols[i].controls.append(ft.Text(response, selectable=True))
             page.update()
-        # end of generate_response function
 
     def on_button_click(e):
         if page.controls[0].visible and page.controls[1].visible:
@@ -129,7 +126,6 @@ def main(page: ft.Page):
             return
 
         generate_response(prompt)
-        # end of on_button_click function
 
     def layout(e):
         print('showing layout')
@@ -147,28 +143,23 @@ def main(page: ft.Page):
             return
 
         print(assistant_ids)
-        # Find the index of the assistant with the given ID
         print(f"removing assistant {assistant_id}")
         i = assistants.index(client.beta.assistants.retrieve(assistant_id))
         print(f"found assistant at index {i} {assistant_ids[i]}")
 
-        # Remove assistant, thread, and column from their lists
         del assistants[i]
         del threads[i]
         del cols[i]
         del row.controls[i]
 
-        # Remove assistant's ID from the file
         with open('assistants.txt', 'r') as f:
             lines = f.readlines()
         with open('assistants.txt', 'w') as f:
             for line in lines:
                 if line.strip() != assistant_id:
                     f.write(line)
-        # Update the UI
         page.update()
         print('removed assistant')
-    # variables
     cols = [ft.Column(expand=True, scroll=ft.ScrollMode.ALWAYS, alignment=ft.MainAxisAlignment.CENTER) for _ in range(len(assistants))]
 
     new_message = ft.TextField(label='Message', hint_text='Say something...')
