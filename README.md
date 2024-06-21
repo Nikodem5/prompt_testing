@@ -4,21 +4,21 @@ It's main goal is to test multiple system prompts for assistants at once.
 ## Installation
 **Install the required Python packages:**
 
-    ```
+    
     pip install -r requirements.txt
-    ```
+    
 
 **Set the `OPENAI_API_KEY` environment variable:**
 
-    ```
+    
     export OPENAI_API_KEY='your_openai_api_key'
-    ```
+    
 
 **Run the app**
 
-    ```
+    
     flet run prompt_testing_v1.py
-    ```
+    
 
 ## App Functionality
 Main Page:
