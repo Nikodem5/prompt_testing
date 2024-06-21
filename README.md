@@ -35,9 +35,9 @@ This app is designed to facilitate interaction with multiple AI assistants using
 ## App Functionality
 Main Page:
   Add Assistant: Enter an assistant ID and click the "Add Assistant" button to add a new assistant. The assistant ID is appended to the assistants.txt file.
-  Remove Assistant: Click the "Remove" button next to an assistant to remove it from the app and the assistants.txt file.
+  Remove Assistant: Click the "Remove" button to remove the last assistant from the app and the assistants.txt file.
   Send Prompt: Enter a message in the text field and click the "Send" button to send the prompt to all added assistants. The responses are displayed below the prompt.
-  Show Layout: Click the "Show" button to display the current layout of the page in the console for debugging purposes.
+  Show Layout: Click the "Show" button to display the current layout of the page in the console for debugging purposes. (used for development)
 
 ## Response Generation
 When a prompt is sent:
