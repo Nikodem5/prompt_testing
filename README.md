@@ -1,7 +1,19 @@
-Very simple chat-like app built using Flet package and OpenAI's assistants API.
-It's main goal is to test multiple system prompts for assistants at once.
+This app is designed to facilitate interaction with multiple AI assistants using the OpenAI API. Users can add, manage, and remove AI assistants, and send prompts to receive generated responses from each assistant. It's main goal is to test multiple system prompts at once.
+
+## Prerequisites
+
+- **Python 3.8+**
+- An **OpenAI API key** with the `OPENAI_API_KEY` environment variable set.
+- Dependencies listed in the **`requirements.txt`** file.
 
 ## Installation
+**Clone the repository**:
+
+    
+    git clone https://github.com/Nikodem5/prompt_testing
+    cd prompt_testing
+    
+
 **Install the required Python packages:**
 
     
