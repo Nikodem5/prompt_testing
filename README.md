@@ -1,3 +1,5 @@
+## Outdated version (Old project)
+
 This app is designed to facilitate interaction with multiple AI assistants using the OpenAI API. Users can add, manage, and remove AI assistants, and send prompts to receive generated responses from each assistant. It's main goal is to test multiple system prompts at once.
 
 ## Prerequisites
